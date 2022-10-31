@@ -16,5 +16,5 @@ jobs:
         
       - uses: actions/upload-artifact@v3
         with:
-          name: upload
-          path: ~/sosistab/target/release/geph4-exit
+          name: bin
+          path: ~/geph4-exit/target/release/geph4-exit
