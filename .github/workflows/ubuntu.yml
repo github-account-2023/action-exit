@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: build
-        run: cd rustup default nightly-x86_64-unknown-linux-musl && git clone https://github.com/geph-official/geph4-exit.git && cd geph4-exit && cargo build --release
+        run: cd && rustup default nightly-x86_64-unknown-linux-musl && git clone https://github.com/geph-official/geph4-exit.git && cd geph4-exit && cargo build --release
         
       - uses: actions/upload-artifact@v3
         with:
