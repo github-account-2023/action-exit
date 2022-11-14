@@ -16,5 +16,5 @@ jobs:
         
       - uses: actions/upload-artifact@v3
         with:
-          name: bin
+          name: geph4-exit
           path: ~/geph4-exit/target/x86_64-unknown-linux-musl/release/geph4-exit
