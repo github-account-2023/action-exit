@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: build-a7c8f107ead0dc0f3715ed6191d43849616786f0
-        run: cd && cargo install cross && git clone https://github.com/Hailey2022/geph4-exit && cd geph4-exit && cross build --release --locked --target x86_64-unknown-linux-musl
+        run: cd && curl -o cross-x86_64-unknown-linux-musl.tar.gz -fsSL https://github.com/cross-rs/cross/releases/latest/download/cross-x86_64-unknown-linux-musl.tar.gz && tar zxvf cross-x86_64-unknown-linux-musl.tar.gz && cp ~/cross-x86_64-unknown-linux-musl/* /usr/bin/ && chmod +x /usr/bin/cross* && git clone https://github.com/Hailey2022/geph4-exit && cd geph4-exit && cross build --release --locked --target x86_64-unknown-linux-musl
         
       - uses: actions/upload-artifact@v3
         with:
