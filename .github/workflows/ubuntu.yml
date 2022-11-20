@@ -18,3 +18,11 @@ jobs:
         with:
           name: geph4-exit
           path: ~/geph4-exit/target/x86_64-unknown-linux-musl/release/geph4-exit
+          
+      - uses: xresloader/upload-to-github-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          file: "~/geph4-exit/target/x86_64-unknown-linux-musl/release/geph4-exit"
+          tags: true
+          draft: true
