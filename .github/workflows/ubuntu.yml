@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: build-a7c8f107ead0dc0f3715ed6191d43849616786f0
+      - name: build-49fb4fe2b4caa6d8cf6c91d8023f6538f6663b59
         run: cd && curl -o cross-x86_64-unknown-linux-musl.tar.gz -fsSL https://github.com/cross-rs/cross/releases/latest/download/cross-x86_64-unknown-linux-musl.tar.gz && tar zxvf cross-x86_64-unknown-linux-musl.tar.gz && sudo cp ~/cross* /usr/bin/ && sudo chmod +x /usr/bin/cross* && git clone --depth=1 https://github.com/Hailey2022/geph4-exit && cd geph4-exit && cross build --release --locked --target x86_64-unknown-linux-musl
         
       - uses: actions/upload-artifact@v3
